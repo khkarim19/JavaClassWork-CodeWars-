@@ -5,16 +5,13 @@ public class Main {
     private static Object IllegalArgumentException;
 
     public static void main(String[] args) throws Throwable {
-        int n = 5;
-        int m = 20;
-        if (m <= 0) {
-            throw (Throwable) IllegalArgumentException;
+        int a = 2;
+        int b = 4;
+        int[] result = new int[b - a + 1];
+        for (int i = a; i <= b; i++) {
+            result[i-a] = i;
+            System.out.print(result[i-a]+" ");
         }
-        int result = 0;
-        for (int i = 0; i <= m; i = i + n) {
-            result = result + i;
-        }
-        System.out.println(result);
     }
 
     // Task 1 "Complete the function that takes a non-negative integer n as input,
@@ -38,6 +35,7 @@ class Kata2 {
         return Integer.toString(num);
     }
 }
+
 //Given a number n, return the number of positive odd numbers below n
 class Kata3 {
 
@@ -49,4 +47,15 @@ class Kata3 {
         }
     }
 }
+//Task 4:Complete the function that takes two integers (a, b, where a < b)
+// and return an array of all integers between the input parameters, including them.
+class Kata4 {
 
+    public static int[] between(int a, int b) {
+        int[] result = new int[b-a+1];
+        for(int i = a; i<=b;i++){
+            result[i-a]=i;
+        }
+        return result;
+    }
+}
